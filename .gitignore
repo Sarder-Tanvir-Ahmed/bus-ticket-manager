@@ -1,0 +1,23 @@
+# Laravel specific
+/bootstrap/compiled.php
+app/storage/
+public/storage
+public/hot
+storage/*.key
+.env
+Homestead.yaml
+*.sqlite*
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+# Vendor libraries
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+blah
+
+# IDEs and editors
+.idea/
+.vscode/
