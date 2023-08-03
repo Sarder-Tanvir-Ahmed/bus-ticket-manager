@@ -5,6 +5,7 @@ public/storage
 public/hot
 storage/*.key
 .env
+*.sql
 Homestead.yaml
 *.sqlite*
 Homestead.json
