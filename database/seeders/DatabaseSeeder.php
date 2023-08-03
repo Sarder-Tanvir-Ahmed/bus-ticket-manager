@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -107,6 +108,17 @@ class DatabaseSeeder extends Seeder
                 'created_at' => '2023-07-04 09:53:09',
                 'updated_at' => '2023-07-10 09:00:25',
                 'role' => 'Brand',
+            ],
+            [
+                'id' => 3,
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'email_verified_at' => null,
+                'password' => Hash::make ('admin'),
+                'remember_token' => null,
+                'created_at' => '2023-07-04 09:53:09',
+                'updated_at' => '2023-07-10 09:00:25',
+                'role' => 'Admin',
             ],
         ]);
 

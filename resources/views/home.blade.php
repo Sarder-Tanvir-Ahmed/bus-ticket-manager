@@ -1,22 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Welcome, {{ Auth::user()->name }} - Bus Ticket Management</title>
-    <!-- loader-->
-
-    <script src="js/modernizr-2.6.2.min.js"></script>
-</head>
-
-<body class="bg-theme bg-theme3">
 
     <!-- Start wrapper-->
     <div id="wrapper">
@@ -73,13 +58,13 @@
     <!--End Back To Top Button-->
 
     <!--Start footer-->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="text-center">
                 <p class="mb-0">© 2023 Bus Ticket Management. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!--End footer-->
 
     </div>
@@ -169,8 +154,6 @@
             margin: 0;
         }
     </style>
-</body>
 
-</html>
 
 @endsection
