@@ -37,5 +37,18 @@ class BrandTicketPublishedController extends Controller
 
     }
 
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $searchResults = Brand_Ticket_Published::where('b_comp_ticket_from', 'LIKE', '%' . $query . '%')
+            ->orWhere('b_comp_ticket_to', 'LIKE', '%' . $query . '%')
+            ->get();
+
+        return view('search-results', compact('searchResults'));
+    }
+
+
     
 }

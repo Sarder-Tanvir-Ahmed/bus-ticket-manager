@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/search', [App\Http\Controllers\BrandTicketPublishedController::class, 'search'])->name('search');
+
 Route::get('/brand', [App\Http\Controllers\bus_comp_Controller::class, 'index'])->name('brand');
 
 Auth::routes();
