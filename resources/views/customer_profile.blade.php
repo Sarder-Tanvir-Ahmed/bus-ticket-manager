@@ -57,6 +57,7 @@
                 <hr>
 
                 <a href="{{ route('bus_company_profile_edit') }}" class="btn btn-outline-secondary">
+                <!-- <a href="{{ route('profile_update') }}" class="btn btn-outline-secondary"> -->
                     <i class="icon-lock"></i> Edit Profile!
                 </a>
 
