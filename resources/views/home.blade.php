@@ -5,6 +5,8 @@
 <html lang="en">
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -39,6 +41,8 @@
 
                 <!-- Start Dashboard Content-->
 
+                <
+
                 <!--End Dashboard Content-->
                 <!-- show all ticket-->
                 <div class="row">
@@ -51,13 +55,65 @@
                                 <div class="alert alert-success" role="alert">
                                     You are logged in!
                                 </div>
+
+
+                                <div class="container" >
+                    
+                                    <h2>Available Ticket Search</h2>
+                                    <input type="text" id="searchInput" placeholder="Search ticket from/to">
+                                    <div id="searchResults"></div>
+                                    
+                                </div>
+                                
+                            
+                                <script>
+                                // Function to perform the live search
+                                function performLiveSearch() {
+                                    let searchInput = $('#searchInput').val();
+                
+                                    // Clear search results if the search input is empty
+                                    if (searchInput === '') {
+                                        $('#searchResults').empty();
+                                        return;
+                                    }
+                                    console.log('Performing live search...');
+                                    // Make an AJAX request to your Laravel route for search
+                                    axios.get('/customersearch', { params: { query: searchInput } })
+                                    
+
+                                        .then(response => {
+                                            let searchResults = $('#searchResults');
+                                            searchResults.html(response.data);
+                                        })
+                                        .catch(error => {
+                                            console.error(error);
+                                        });
+                                }
+                
+                                    // Perform live search when the user types in the search input
+                                    $('#searchInput').on('input', function() {
+                                        performLiveSearch();
+                                    });
+                                 </script>
+
+
+
+
                             </div>
                         </div>
                     </div>
                 </div>
 
+                
+
             </div>
         </div>
+
+
+      
+
+
+
     </div>
     <!---------------------------------->
 
@@ -168,7 +224,34 @@
         .footer p {
             margin: 0;
         }
+
+
+        .search-results-table {
+            width: 100%;
+            max-width: 800px; /* Adjust the max-width as needed */
+            margin-top: 20px; /* Adjust this margin as needed */
+        }
+
+        .table-row {
+            display: flex;
+        }
+
+        .table-cell {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .header {
+            font-weight: bold;
+        }
     </style>
+
+
+
+
+
 </body>
 
 </html>

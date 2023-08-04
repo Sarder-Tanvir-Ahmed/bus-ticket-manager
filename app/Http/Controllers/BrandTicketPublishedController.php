@@ -49,6 +49,10 @@ class BrandTicketPublishedController extends Controller
         return view('search-results', compact('searchResults'));
     }
 
+    
+
+    
+
 
     
 }

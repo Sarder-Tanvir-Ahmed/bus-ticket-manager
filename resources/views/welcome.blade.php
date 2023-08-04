@@ -97,6 +97,7 @@
                     }
 
                     // Make an AJAX request to your Laravel route for search
+                    console.log('Performing live search...');
                     axios.get('/search', { params: { query: searchInput } })
                         .then(response => {
                             let searchResults = $('#searchResults');

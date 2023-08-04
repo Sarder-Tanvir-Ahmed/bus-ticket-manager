@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/search', [App\Http\Controllers\BrandTicketPublishedController::class, 'search'])->name('search');
+
 
 Route::get('/brand', [App\Http\Controllers\bus_comp_Controller::class, 'index'])->name('brand');
 
@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/search', [App\Http\Controllers\BrandTicketPublishedController::class, 'search'])->name('search');
 
 
 Route::POST('BrandAddTicketSubmit','App\Http\Controllers\BrandTicketPublishedController@BrandAddTicketSubmit');
@@ -46,6 +47,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/shopping-items', [ShoppingItemController::class, 'index'])->name('shopping-items.index');
     Route::post('/shopping-items/{shoppingItem}/add-to-cart', [ShoppingItemController::class, 'addToCart'])->name('shopping-items.add-to-cart');
     Route::post('/shopping-items/{shoppingItem}/remove-from-cart', [ShoppingItemController::class, 'removeFromCart'])->name('shopping-items.remove-from-cart');
+    Route::get('/customersearch', [App\Http\Controllers\HomeController::class, 'customersearch'])->name('customersearch');
+    Route::post('/bookticket', [App\Http\Controllers\HomeController::class, 'bookTicket'])->name('bookticket');
+
 });
 
 // Route::post('/shopping-items/{shoppingItem}/add-to-cart', [ShoppingItemController::class, 'addToCart'])->name('shopping-items.add-to-cart');
