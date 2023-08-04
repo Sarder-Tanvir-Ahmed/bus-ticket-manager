@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:9HnfbDl4ftxcFofpUZT8Pem2+b/6k1G0MLsji7uOD+8=',
+    'key' => 'base64:dUsK3gB0Z6XSQZ7C5gAoEtnYbyTyX7HU4k37s2aUYGs=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -197,8 +197,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/framework/cache/data',
-        'lock_path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/framework/cache/data',
+        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/framework/cache/data',
+        'lock_path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -371,13 +371,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/app',
+        'root' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/app/public',
+        'root' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -397,7 +397,7 @@
     ),
     'links' => 
     array (
-      '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/public/storage' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/app/public',
+      '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/public/storage' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -436,14 +436,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/logs/laravel.log',
+        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/logs/laravel.log',
+        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -508,7 +508,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/logs/laravel.log',
+        'path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -575,7 +575,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/resources/views/vendor/mail',
+        0 => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -686,7 +686,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/framework/sessions',
+    'files' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -706,9 +706,9 @@
   array (
     'paths' => 
     array (
-      0 => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/resources/views',
+      0 => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/resources/views',
     ),
-    'compiled' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager/storage/framework/views',
+    'compiled' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager/storage/framework/views',
   ),
   'flare' => 
   array (
@@ -784,7 +784,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => '/home/mehrab/Study/summer2023/cse471/Project/bus-ticket-manager',
+    'remote_sites_path' => '/home/mehrab/Study/summer2023/cse471/Project/bus/bus-ticket-manager',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
