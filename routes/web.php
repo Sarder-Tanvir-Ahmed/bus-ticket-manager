@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/brand', [App\Http\Controllers\bus_comp_Controller::class, 'index'])->name('brand');
+Route::POST('/brand-register', [App\Http\Controllers\BController::class, 'store'])->name('brand_register')->middleware('auth');
 
 Auth::routes();
 

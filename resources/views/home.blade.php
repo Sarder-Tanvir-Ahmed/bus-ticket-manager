@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -129,13 +127,13 @@
     <!--End Back To Top Button-->
 
     <!--Start footer-->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="text-center">
                 <p class="mb-0">© 2023 Bus Ticket Management. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!--End footer-->
 
     </div>
@@ -254,6 +252,5 @@
 
 </body>
 
-</html>
 
 @endsection
