@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 py-4">
             <div class="card border-0 shadow p-4 rounded-lg">
                 <div class="card-header bg-primary text-white text-center">
                     <h2>{{ __('Register a brand') }}</h2>
@@ -66,7 +66,7 @@
 
                         <div class="form-group">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary btn-block">
+                                <button type="submit" class="btn btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -79,13 +79,7 @@
 </div>
 
 <style>
-    body {
-        background-color: #f9f9f9;
-        background-image: url('https://unsplash.com/photos/C-zgN_LEKb8');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
+
 
     .card {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

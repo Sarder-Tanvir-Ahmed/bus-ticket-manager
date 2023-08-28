@@ -11,12 +11,12 @@
 
 @section('content')
 <script src="js/modernizr-2.6.2.min.js"></script>
-    <h1 class="text-center">FOOD CHART</h1>
+    <h1 class="heading tcenter py-4">FOOD CHART</h1>
     <h6 class="text-center">Catering booking available only till the day before departure</h6>
     <form action="{{ route('shopping-items.addToCart') }}" method="POST">    
         @csrf   
         <div class="d-flex justify-content-center">
-            <table class="table table-bordered table-striped">
+            <table class="rwd-table">
                 <thead>
                     <!-- column headings -->
                     <tr class="text-center"> 

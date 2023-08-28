@@ -23,6 +23,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/search', [App\Http\Controllers\BrandTicketPublishedController::class, 'search'])->name('search');
+Route::get('/ratings', [App\Http\Controllers\ShowAllBusCompForRanking::class, 'showRatings'])->name('ratings');
+
 
 
 Route::POST('BrandAddTicketSubmit','App\Http\Controllers\BrandTicketPublishedController@BrandAddTicketSubmit');

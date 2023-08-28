@@ -16,6 +16,8 @@
     <!-- Styles -->
     <style>
         /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
+
+      
         *,
         ::after,
         ::before {
@@ -27,7 +29,10 @@
 
         ::after,
         ::before {
-            --tw-content: ''
+            --tw-content: '';
+        }
+        body{
+            margin:0 !important;
         }
 
         html {
@@ -36,23 +41,19 @@
             -moz-tab-size: 4;
             tab-size: 4;
             font-family: Figtree, sans-serif;
-            font-feature-settings: normal
+            font-feature-settings: normal;
         }
-
-        body {
-            margin: 0;
-            line-height: inherit
-        }
+        
 
         hr {
             height: 0;
             color: inherit;
-            border-top-width: 1px
+            border-top-width: 1px;
         }
 
         abbr:where([title]) {
             -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted
+            text-decoration: underline dotted;
         }
 
         h1,
@@ -62,17 +63,17 @@
         h5,
         h6 {
             font-size: inherit;
-            font-weight: inherit
+            font-weight: inherit;
         }
 
         a {
             color: inherit;
-            text-decoration: inherit
+            text-decoration: inherit;
         }
 
         b,
         strong {
-            font-weight: bolder
+            font-weight: bolder;
         }
 
         code,
@@ -80,11 +81,11 @@
         pre,
         samp {
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 1em
+            font-size: 1em;
         }
 
         small {
-            font-size: 80%
+            font-size: 80%;
         }
 
         sub,
@@ -92,21 +93,21 @@
             font-size: 75%;
             line-height: 0;
             position: relative;
-            vertical-align: baseline
+            vertical-align: baseline;
         }
 
         sub {
-            bottom: -.25em
+            bottom: -.25em;
         }
 
         sup {
-            top: -.5em
+            top: -.5em;
         }
 
         table {
             text-indent: 0;
             border-color: inherit;
-            border-collapse: collapse
+            border-collapse: collapse;
         }
 
         button,
@@ -120,12 +121,12 @@
             line-height: inherit;
             color: inherit;
             margin: 0;
-            padding: 0
+            padding: 0;
         }
 
         button,
         select {
-            text-transform: none
+            text-transform: none;
         }
 
         [type=button],
@@ -133,6 +134,7 @@
         [type=submit],
         button {
             -webkit-appearance: button;
+            appearance: button;
             background-color: transparent;
             background-image: none
         }
@@ -156,6 +158,7 @@
 
         [type=search] {
             -webkit-appearance: textfield;
+            appearance: textfield;
             outline-offset: -2px
         }
 
@@ -233,17 +236,16 @@
         svg,
         video {
             display: block;
-            vertical-align: middle
         }
 
         img,
         video {
             max-width: 100%;
-            height: auto
+            height: auto;
         }
 
         [hidden] {
-            display: none
+            display: none;
         }
 
         *,
@@ -867,13 +869,11 @@
             justify-content: center;
             align-items: center;
             margin-top: 20px;
-            height: 150px; /* Adjust as needed */
+            height: 150px;
+            /* Adjust as needed */
             overflow: hidden;
         }
-
         
-
-
     </style>
 
 
@@ -883,7 +883,7 @@
 
 
 <body class="antialiased">
-    <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+    <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white full">
 
         @if (Route::has('login'))
         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
@@ -906,7 +906,7 @@
                 EasyGO
             </div>
 
-            {{-- <div class="container text-gray-500">
+            <div class="container text-gray-500">
 
                 <h2>Available Ticket Search</h2>
                 <input type="text" id="searchInput" placeholder="Search ticket from/to">
@@ -941,17 +941,16 @@
                 $('#searchInput').on('input', function() {
                     performLiveSearch();
                 });
-            </script> --}}
+            </script>
 
             <div class="image-slider">
                 <img src="{{ asset('food_images/bus1.jpg') }}" alt="Bus 1" class="slider-image">
                 <img src="{{ asset('food_images/bus2.jpg') }}" alt="Bus 2" class="slider-image">
-            
+
 
 
 
                 <script>
-                    
                     var slideIndex = 0;
                     carousel();
 
@@ -962,16 +961,19 @@
                             x[i].style.display = "none";
                         }
                         slideIndex++;
-                        if (slideIndex > x.length) {slideIndex = 1}
-                        x[slideIndex-1].style.display = "block";
+                        if (slideIndex > x.length) {
+                            slideIndex = 1
+                        }
+                        x[slideIndex - 1].style.display = "block";
                         setTimeout(carousel, 2000); // Change image every 2 seconds
                     }
-
                 </script>
             </div>
+        
+
+            
 
         </div>
-    </div>
     </div>
 </body>
 

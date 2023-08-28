@@ -88,4 +88,31 @@ class ShowAllBusCompForRanking extends Controller
         
         
     }
+
+    public function showRatings()
+    {
+        // Fetch all ratings
+        $ratings = show_rating::all();
+
+        // Initialize an array to organize ratings by bus company
+        $ratingsByCompany = [];
+
+        // Organize ratings by bus company
+        foreach ($ratings as $rating) {
+            $busCompanyId = $rating->bus_comp_id;
+
+            if (!isset($ratingsByCompany[$busCompanyId])) {
+                $ratingsByCompany[$busCompanyId] = [
+                    'company_name' => $rating->company_name,
+                    'ratings' => [0, 0, 0, 0, 0], // Initialize an array to store counts for each rating (1-5)
+                ];
+            }
+
+            // Increment the corresponding rating count
+            $ratingsByCompany[$busCompanyId]['ratings'][$rating->rating - 1]++;
+        }
+
+        // Pass the $ratingsByCompany data to the welcome view
+        return view('welcome', compact('ratingsByCompany'));
+    }
 }

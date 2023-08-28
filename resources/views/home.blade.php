@@ -1,130 +1,189 @@
 @extends('layouts.app')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
+<!-- Add your meta tags, stylesheets, and other head content here -->
+<!-- Add animate.css library for animations -->
 
-<head>
-    <!-- Add your meta tags, stylesheets, and other head content here -->
-    <!-- Add animate.css library for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Welcome, {{ Auth::user()->name }} - Bus Ticket Management</title>
-    <!-- loader-->
+<!-- loader-->
+<!-- Start wrapper-->
 
-    <script src="js/modernizr-2.6.2.min.js"></script>
-</head>
+<!--Start sidebar-wrapper-->
 
-<body class="bg-theme bg-theme3">
+<!--End sidebar-wrapper-->
+<style>
+    .show1 img {
+        display: block;
+    }
 
-    <!-- Start wrapper-->
-    <div id="wrapper">
+    .headerH {
+        width: 70%;
+        /* margin: auto; */
+        text-align: center;
+    }
 
-        <!--Start sidebar-wrapper-->
-        <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-            <div class="brand-logo">
-                <h3>
-                    <a style="color:#FFFAF0">
-                        <i>{{ Auth::user()->name }}</i>
-                    </a>
-                </h3>
+    .headerH h3 {
+        white-space: nowrap;
+        text-shadow: 2px 2px 5px #000000;
+        font-weight: bolder;
+        font-size: 2.5rem;
+    }
+
+    .containerH {
+        display: flex;
+
+        flex-direction: column;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    .show1 {
+        display: flex;
+        flex-wrap: wrap;
+        height: 70%;
+        gap: 1.1rem;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid #331; */
+    }
+
+    .featureH {
+        width: 24%;
+        height: 80%;
+        /* border: 2px solid blue; */
+        border-radius: 10px;
+        background-color: #f3cc3e;
+        box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
+        transition: all 0.5s ease-in-out;
+        /* flex-basis: 220px; */
+    }
+    .featureH:hover{
+        box-shadow: 2px 2px 5px rgb(0,0,0,0.5);
+        cursor:pointer;
+    }
+
+    .image {
+        /* border: 2px dotted red; */
+
+        width: 100%;
+        height: 60%;
+    }
+
+    .image img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        padding: 0.5rem;
+    }
+
+    
+    .content h4 {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+
+    /* Animation styles */
+    .animate__animated {
+        animation-duration: 1s;
+    }
+
+    .animate__fadeInUp {
+        animation-name: fadeInUp;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 50%, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+</style>
+
+<!-- Search and results section -->
+<div class="containerH">
+    <div class="headerH">
+        <h3 class="text-white animate__animated animate__fadeInUp animate__delay-1s">
+            Discover the Benefits of Our Bus Management Service
+        </h3>
+    </div>
+    <div class="show1">
+        <div class="featureH">
+            <div class="image">
+                <img src="{{ asset('food_images/whyChooseUs.jpg') }}" alt="Bus Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-2s">
+            </div>
+            <div class="content">
+                <h4 class="text-black">Why Choose Us?</h4>
+                <p class="text-black">
+                    Welcome to our Bus Ticket Management service, where your travel experience becomes a breeze.
+                    With our user-friendly platform, we provide you with an array of featureHs to ensure your journey
+                    is seamless and comfortable.
+                </p>
+
             </div>
         </div>
-        <!--End sidebar-wrapper-->
+        <div class="featureH">
+            <div class="image">
+                <img src="{{ asset('food_images/explore.jpeg') }}" alt="Routes Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-3s">
 
-        <div class="clearfix"></div>
-        <div class="content-wrapper">
-            <div class="container-fluid">
+            </div>
+            <div class="content">
+                <h4 class="text-black">Explore Routes</h4>
+                <p class="text-black">
+                    Embark on a journey with endless possibilities. Our extensive network of routes covers numerous
+                    destinations, catering to your travel needs. Find the perfect route for your next adventure.
+                </p>
 
-                <!-- Welcome card with animation -->
-                <div class="card">
-                    <!-- ... (Your existing card content) ... -->
-                </div>
-
-                <!-- Search and results section -->
-                <div class="container">
-                    <!-- ... (Your existing search section) ... -->
-                </div>
-
-                <!-- Informational content in a single row -->
-                <div class="row mt-5 align-items-center text-center">
-                    <div class="col-md-12">
-                        <h3 class="text-primary animate__animated animate__fadeInUp animate__delay-1s">
-                            Discover the Benefits of Our Bus Management Service
-                        </h3>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="https://i.ibb.co/4Rmy4G0/bus1.jpg" alt="Bus Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-2s">
-                        <h4 class="text-primary mt-3">Why Choose Us?</h4>
-                        <p class="text-secondary">
-                            Welcome to our Bus Ticket Management service, where your travel experience becomes a breeze.
-                            With our user-friendly platform, we provide you with an array of features to ensure your journey
-                            is seamless and comfortable.
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="https://i.ibb.co/0ZKv1K5/road.jpg" alt="Routes Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-3s">
-                        <h4 class="text-primary mt-3">Explore Routes</h4>
-                        <p class="text-secondary">
-                            Embark on a journey with endless possibilities. Our extensive network of routes covers numerous
-                            destinations, catering to your travel needs. Find the perfect route for your next adventure.
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="https://i.ibb.co/vLgmZ3h/seat.jpg" alt="Seat Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-4s">
-                        <h4 class="text-primary mt-3">Customize Seats</h4>
-                        <p class="text-secondary">
-                            Your comfort is our priority. With our user-friendly interface, customize your seat selection
-                            before booking. Choose window or aisle seats, and travel in utmost comfort.
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="https://i.ibb.co/bBkmtNz/bkash-2.jpg" alt="Payment Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-5s">
-                        <h4 class="text-primary mt-3">Secure Payments</h4>
-                        <p class="text-secondary">
-                            Your transactions are safe and secure. Our platform ensures your payment information is
-                            protected, allowing you to book with confidence and convenience.
-                        </p>
-                    </div>
-                </div>
-
+            </div>
+        </div>
+        <div class="featureH">
+            <div class="image">
+                <img src="{{ asset('food_images/bus_seat.webp') }}" alt="Seat Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-4s">
+            </div>
+            <div class="content">
+                <h4 class="text-black">Customize Seats</h4>
+                <p class="text-black">
+                    Your comfort is our priority. With our user-friendly interface, customize your seat selection
+                    before booking. Choose window or aisle seats, and travel in utmost comfort.
+                </p>
+            </div>
+        </div>
+        <div class="featureH">
+            <div class="image">
+                <img src="{{ asset('food_images/payment_hok_bkash.jpg') }}" alt="Payment Image" class="img-fluid animate__animated animate__fadeInUp animate__delay-5s">
+            </div>
+            <div class="content">
+                <h4 class="text-black">Secure Payments</h4>
+                <p class="text-black">
+                    Your transactions are safe and secure. Our platform ensures your payment information is
+                    protected, allowing you to book with confidence and convenience.
+                </p>
             </div>
         </div>
     </div>
+    <!-- ... (Your existing search section) ... -->
+</div>
 
-    <!-- ... (Your existing overlay, back to top button, and closing tags) ... -->
+<!-- Informational content in a single row -->
 
-    <!-- Additional styles -->
-    <style>
-        /* ... (Your existing styles) ... */
 
-        /* Animation styles */
-        .animate__animated {
-            animation-duration: 1s;
-        }
 
-        .animate__fadeInUp {
-            animation-name: fadeInUp;
-        }
+<!-- ... (Your existing overlay, back to top button, and closing tags) ... -->
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 50%, 0);
-            }
-            to {
-                opacity: 1;
-                transform: none;
-            }
-        }
-    </style>
+<!-- Additional styles -->
 
-</body>
+
 
 @endsection
